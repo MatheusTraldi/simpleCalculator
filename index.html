@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+
+        <div class="display" :style="fontSizeStyle"> {{ displayValue }} </div>
+        <div class="doubleButton" @click="removeFromDisplay()">&#8592</div>
+        <div class="button" @click="reset()">RES</div>
+        <div class="button" @click="sum()">+</div>
+        <div class="button" @click="insertOnDisplay('7')">7</div>
+        <div class="button" @click="insertOnDisplay('8')">8</div>
+        <div class="button" @click="insertOnDisplay('9')">9</div>
+        <div class="button" @click="sub()">-</div>
+        <div class="button" @click="insertOnDisplay('4')">4</div>
+        <div class="button" @click="insertOnDisplay('5')">5</div>
+        <div class="button" @click="insertOnDisplay('6')">6</div>
+        <div class="button" @click="mult()">*</div>
+        <div class="button" @click="insertOnDisplay('1')">1</div>
+        <div class="button" @click="insertOnDisplay('2')">2</div>
+        <div class="button" @click="insertOnDisplay('3')">3</div>
+        <div class="button" @click="div()">/</div>
+        <div class="doubleButton" @click="insertOnDisplay('0')">0</div>
+        <div class="button" @click="insertOnDisplay('.')">.</div>
+        <div class="button" @click="result()">=</div>
+
+    </div>
+
+</body>
+<script src="main.js"></script>
+</html>
