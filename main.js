@@ -24,11 +24,16 @@ const app = new Vue({
                 this.fontSizeStyle = {
                     fontSize: '45px',
                 };
-            };
+            }
+            else {
+                this.fontSizeStyle = {
+                    fontSize: '95px',
+                };
+            }
 
             if(value.length > 17) {
                 value = value.slice(0, 17);
-            };
+            }
 
             this.displayValue = value;
         },
