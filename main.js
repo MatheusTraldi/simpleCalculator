@@ -1,3 +1,7 @@
+function focusOnApp() {
+    document.getElementById('app').focus();
+}
+
 const app = new Vue({
     el: '#app',
     data: {
