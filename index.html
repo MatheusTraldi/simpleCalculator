@@ -8,9 +8,27 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <script src="vue.js"></script>
 </head>
-<body>
+<body onload="focusOnApp()">
     
-    <div id="app">
+    <div id="app" tabindex="0" 
+        @keyup.delete="removeFromDisplay()"
+        @keyup.r="reset()"
+        @keyup.107="sum()"
+        @keyup.103="insertOnDisplay('7')"
+        @keyup.104="insertOnDisplay('8')"
+        @keyup.105="insertOnDisplay('9')"
+        @keyup.109="sub()"
+        @keyup.100="insertOnDisplay('4')"
+        @keyup.101="insertOnDisplay('5')"
+        @keyup.102="insertOnDisplay('6')"
+        @keyup.106="mult()"
+        @keyup.97="insertOnDisplay('1')"
+        @keyup.98="insertOnDisplay('2')"
+        @keyup.99="insertOnDisplay('3')"
+        @keyup.111="div()"
+        @keyup.96="insertOnDisplay('0')"
+        @keyup.110="insertOnDisplay('.')"
+        @keyup.enter="result()">
 
         <div class="display" :style="fontSizeStyle"> {{ displayValue }} </div>
         <div class="doubleButton" @click="removeFromDisplay()">&#8592</div>
